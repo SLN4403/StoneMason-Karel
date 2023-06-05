@@ -11,5 +11,4 @@
 import stanford.karel.*;
 
 public class StoneMasonKarel extends stanford.karel.Karel {
-
 }
