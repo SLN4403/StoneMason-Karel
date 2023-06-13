@@ -31,4 +31,14 @@ public class StoneMasonKarel extends stanford.karel.Karel {
             }
         }
     }
+    private void goDown(){
+        turnLeft();
+        turnLeft();
+        while (beepersPresent()) {
+            move();
+            if (frontIsBlocked()) {
+                turnLeft();
+            }
+        }
+    }
 }
