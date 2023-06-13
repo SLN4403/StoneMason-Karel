@@ -13,7 +13,7 @@ import stanford.karel.*;
 public class StoneMasonKarel extends stanford.karel.Karel {
 
     public void run() {
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             if (noBeepersPresent()) {
             putBeeper();
             turnLeft();
@@ -39,6 +39,19 @@ public class StoneMasonKarel extends stanford.karel.Karel {
             if (frontIsBlocked()) {
                 turnLeft();
             }
+        }
+    }
+    private void goToNextOne(){
+        for (int i = 0; i < 3; i++) {
+            move();
+        }
+        if (beepersPresent()) {
+            turnLeft();
+            doProcess();
+        } else {
+            putBeeper();
+            turnLeft();
+            doProcess();
         }
     }
 }
