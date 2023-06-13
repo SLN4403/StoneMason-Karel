@@ -11,4 +11,16 @@
 import stanford.karel.*;
 
 public class StoneMasonKarel extends stanford.karel.Karel {
+    
+    public void run() {
+        for (int i = 0; i < 3; i++){
+            if (noBeepersPresent()) {
+                putBeeper();
+                turnLeft();
+            }
+            doProcess();
+            goDown();
+            goToNextOne();
+        }
+    }
 }
